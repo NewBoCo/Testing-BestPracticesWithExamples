@@ -33,19 +33,20 @@ namespace GettingStarted
         [Given(@"I have entered the numbers 3 and 5")]
         public void GivenIHaveEnteredTheNumbersThreAndFive()
         {
-            ScenarioContext.Current.Pending();
+            firstNumber = 3;
+            secondNumber = 5;
         }
 
         [When(@"I add 3 and 5 together")]
         public void WhenIAddThreeAndFiveTogether()
         {
-            ScenarioContext.Current.Pending();
+            resultOfAddition = firstNumber + secondNumber;
         }
 
         [Then(@"the result should be 8")]
         public void ThenTheResultShouldBeEight()
         {
-            ScenarioContext.Current.Pending();
+            resultOfAddition.Should().Be(8);
         }
 
     }
