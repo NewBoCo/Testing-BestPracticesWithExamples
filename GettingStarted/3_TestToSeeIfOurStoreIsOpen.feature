@@ -2,6 +2,11 @@
 	As a potential customer
 	I want to know if your store is open
 	So I don't waste my time driving there if it isn't
+	Store Hours:
+	M-Th 8-10
+	Fri 8-11
+	Sat 10-8
+	Sun 10-6
 
 @mytag
 Scenario: Check if store is open at 12/11/2019 5:00PM
