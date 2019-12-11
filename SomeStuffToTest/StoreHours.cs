@@ -5,7 +5,7 @@ namespace SomeStuffToTest
 {
     public static class StoreHours
     {
-        public static bool IsStoreOpen(DateTime dateAndTime)
+        public static bool IsStoreOpen(this DateTime dateAndTime)
         {
             var storeHours = new[] {
                 new {
