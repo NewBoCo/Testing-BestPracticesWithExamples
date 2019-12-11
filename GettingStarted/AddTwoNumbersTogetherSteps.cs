@@ -29,5 +29,24 @@ namespace GettingStarted
         {
             resultOfAddition.Should().Be(3);
         }
+
+        [Given(@"I have entered the numbers 3 and 5")]
+        public void GivenIHaveEnteredTheNumbersThreAndFive()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I add 3 and 5 together")]
+        public void WhenIAddThreeAndFiveTogether()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [Then(@"the result should be 8")]
+        public void ThenTheResultShouldBeEight()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
     }
 }
