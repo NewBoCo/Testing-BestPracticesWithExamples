@@ -29,7 +29,7 @@ namespace GettingStarted
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "TestAddingNumbersWithVariables.feature"
+#line 1 "2_TestAddingNumbersWithVariables.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
