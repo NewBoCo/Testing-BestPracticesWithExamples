@@ -11,5 +11,10 @@ namespace GettingStartedWithInterfacesAndMocks.DiceGame.Extensions
         {
             return dice.Count() == 5;
         }
+
+        public static bool IsFiveOfAKind(this IEnumerable<Die> dice)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
