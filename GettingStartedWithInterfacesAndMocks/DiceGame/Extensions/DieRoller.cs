@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GettingStartedWithInterfacesAndMocks.DiceGame.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace GettingStartedWithInterfacesAndMocks.DiceGame.Extensions
 {
@@ -11,5 +14,9 @@ namespace GettingStartedWithInterfacesAndMocks.DiceGame.Extensions
             return _rng.Next(1, 7);
         }
 
+        public static IEnumerable<Die> GetGameRoll()
+        {
+            return Enumerable.Range(1, 5).Select(_ => new Die());
+        }
     }
 }
