@@ -9,7 +9,7 @@ namespace GettingStartedWithInterfacesAndMocks.DiceGame.Extensions
     {
         public static bool IsValidRoll(this IEnumerable<Die> dice)
         {
-            throw new NotImplementedException();
+            return dice.Count() == 5;
         }
     }
 }
