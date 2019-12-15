@@ -14,6 +14,11 @@ namespace GettingStartedWithInterfacesAndMocks.DiceGame.Extensions
 
         public static bool IsFiveOfAKind(this IEnumerable<IDie> dice)
         {
+            if (!dice.IsValidRoll())
+            {
+                throw new ArgumentException("A valid roll must contain exactly five dice");
+            }
+
             throw new NotImplementedException();
         }
     }
