@@ -19,7 +19,7 @@ namespace GettingStartedWithInterfacesAndMocks.DiceGame.Extensions
                 throw new ArgumentException("A valid roll must contain exactly five dice");
             }
 
-            throw new NotImplementedException();
+            return dice.GroupBy(d => d.Value).Count() == 1;
         }
     }
 }
