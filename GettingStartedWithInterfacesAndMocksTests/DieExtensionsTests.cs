@@ -1,7 +1,9 @@
 ﻿using FluentAssertions;
 using GettingStartedWithInterfacesAndMocks.DiceGame.Entities;
 using GettingStartedWithInterfacesAndMocks.DiceGame.Extensions;
+using GettingStartedWithInterfacesAndMocksTests.TestingMocks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -29,13 +31,36 @@ namespace GettingStartedWithInterfacesAndMocksTests
         [TestMethod]
         public void IsFiveOfAKind_AllDiceAreTheSame_ReturnsTrue()
         {
-            IEnumerable<Die> dice = null; //Uh oh... how do I create dice that are all the same?
+            var dice = Enumerable.Range(1, 5).Select(_ => new SettableD6(5));
+
+            dice.IsFiveOfAKind().Should().BeTrue();
         }
 
         [TestMethod]
         public void IsFiveOfAKind_AllDiceAreNotTheSame_ReturnsFalse()
         {
+            var dice = new[]{
+                new SettableD6(1),
+                new SettableD6(3),
+                new SettableD6(4),
+                new SettableD6(1),
+                new SettableD6(1)
+            };
 
+            dice.IsFiveOfAKind().Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void IsFiveOfAKind_NotAValidRoll_ThrowsArgumentException()
+        {
+            var dice = new[]{
+                new SettableD6(2),
+                new SettableD6(3)
+            };
+
+            Action validateRoll = () => dice.IsFiveOfAKind();
+
+            validateRoll.Should().Throw<ArgumentException>();
         }
     }
 }
