@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SomeStuffToTest\SomeStuffToTest.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="1_SimpleStarterTests.feature.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
